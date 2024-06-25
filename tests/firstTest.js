@@ -1,10 +1,6 @@
-const { chromium } = require('playwright');
+const { test, expect } = require('@playwright/test');
 
-(async () => {
-  const browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext();
-  const page = await context.newPage();
-
+test('Sauce Demo login test', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
 
   await page.fill('#user-name', 'standard_user');
@@ -13,13 +9,9 @@ const { chromium } = require('playwright');
 
   const productTitle = await page.isVisible('.title');
   console.log(`Products title is displayed: ${productTitle}`);
+  expect(productTitle).toBe(true);
 
   const shoppingCartIcon = await page.isVisible('.shopping_cart_link');
   console.log(`Shopping Cart icon is displayed: ${shoppingCartIcon}`);
-
-  const productCount = await page.$$eval('.inventory_item', items => items.length);
-  const moreThanOneProduct = productCount > 1;
-  console.log(`More than 1 product is displayed: ${moreThanOneProduct}`);
-
-  await browser.close();
-})();
+  expect(shoppingCartIcon).toBe(true);
+});

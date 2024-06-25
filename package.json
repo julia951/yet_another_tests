@@ -1,19 +1,16 @@
 {
-    "name": "yet_another_tests",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "mocha tests",
-      "test-login": "mocha tests/firstTest.js",
-      "test-cart": "mocha tests/secondTest.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "playwright": "^1.20.0",
-      "mocha": "^9.1.3",
-      "assert": "^2.0.0"
-    }
+  "name": "yet_another_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-login": "npx playwright test tests/firstTest.js",
+    "test-cart": "npx playwright test tests/secondTest.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.20.0",
+    "@playwright/test": "^1.20.0"
   }
-  
+}

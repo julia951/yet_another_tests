@@ -1,6 +1,6 @@
 # Yet Another Tests
 
-This project contains automated tests using Playwright and Mocha for the Sauce Demo website.
+This project contains automated tests using Playwright for the Sauce Demo website.
 
 ## Project Structure
 
@@ -8,7 +8,6 @@ This project contains automated tests using Playwright and Mocha for the Sauce D
   - `firstTest.js`: Test for performing login and verifying elements on the page.
   - `secondTest.js`: Test for adding a product to the cart and verifying the cart contents.
 - `package.json`: Contains the project dependencies and scripts.
-- `mocha.opts`: Configuration file for Mocha.
 - `README.md`: This file.
 
 ## Setup
@@ -17,13 +16,13 @@ This project contains automated tests using Playwright and Mocha for the Sauce D
 
 Make sure you have Node.js installed. Then, install the necessary dependencies:
 
-npm install
-npx playwright install
+`npm install`
+`npx playwright install`
 
 2. Run the Tests
 You can run all the tests or individual tests using npm scripts defined in the package.json.
  
-To run all tests, use: npm test
+To run all tests, use: `npm test`
 
 To run only the login test: npm run test-login
 To run only the cart test: npm run test-cart

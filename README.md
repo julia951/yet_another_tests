@@ -22,10 +22,8 @@ Make sure you have Node.js installed. Then, install the necessary dependencies:
 2. Run the Tests
 You can run all the tests or individual tests using npm scripts defined in the package.json.
  
-To run all tests, use: `npm test`
-
-To run only the login test: npm run test-login
-To run only the cart test: npm run test-cart
+To run only the login test: `npx playwright test firstTest`
+To run only the cart test: `npx playwright test secondTest`
 
 Test Descriptions
 

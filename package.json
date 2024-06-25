@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-login": "npx playwright test tests/firstTest.js",
-    "test-cart": "npx playwright test tests/secondTest.js"
+    "test-login": "npx playwright test tests/firstTest.spec.js",
+    "test-cart": "npx playwright test tests/secondTest.spec.js"
   },
   "author": "",
   "license": "ISC",
